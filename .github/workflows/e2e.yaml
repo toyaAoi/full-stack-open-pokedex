@@ -1,0 +1,14 @@
+name: E2E
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  hello_world_job:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: end to end test
+        run: |
+          npm run test:e2e
