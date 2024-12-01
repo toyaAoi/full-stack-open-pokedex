@@ -21,7 +21,9 @@ jobs:
         run: npm run build
       - name: Test
         run: npm run test
-      - name: Deploy
-        run: npm run start-prod
+      - name: Run production build in background
+        run: |
+          nohup npm run start-prod &
+          sleep 5
       - name: Run e2e tests
         run: npm run test:e2e
