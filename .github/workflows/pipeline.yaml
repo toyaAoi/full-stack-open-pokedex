@@ -28,4 +28,5 @@ jobs:
       - name: Run e2e tests
         run: |
           npx playwright install
+          sudo npx playwright install-deps
           npm run test:e2e
